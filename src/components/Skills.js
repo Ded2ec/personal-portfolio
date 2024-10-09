@@ -9,19 +9,28 @@ export const Skills = ({ language }) => {
   const textContent = {
     en: {
       skills: "Skills",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.",
+      description: "Tools used and abilities",
       webApp: "Web Application",
       network: "Network",
       design: "Design UI & Pictures",
     },
     th: {
       skills: "ทักษะ",
-      description: "Lorem Ipsum เป็นเพียงข้อความจำลองของอุตสาหกรรมการพิมพ์และการเรียงพิมพ์ Lorem Ipsum เป็นข้อความจำลองมาตรฐานของอุตสาหกรรมนี้ตั้งแต่ช่วงปี 1500",
+      description: "เครื่องมือที่ใช้และความสามารถ",
       webApp: "แอปพลิเคชันเว็บ",
       network: "เครือข่าย",
       design: "ออกแบบ UI และรูปภาพ",
+    },
+    jp: {
+      skills: "スキル",
+      description: "使用するツールと能力",
+      webApp: "ウェブアプリケーション",
+      network: "ネットワーク",
+      design: "UIデザインと画像",
     }
-  };
+};
+
+  
 
   const currentText = textContent[language];
 

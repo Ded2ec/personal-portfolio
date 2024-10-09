@@ -10,9 +10,33 @@ export const Banner = ({ language }) => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(100 - Math.random() * 100);
+  
+  const textContent = {
+    en: {
+      tagline: "Welcome to my Portfolio",
+      description: "I am very happy when I get to learn and develop programs in various forms.",
+      nameIntro: "My Name is..",
+     
+      names: ["Nontachai", "LastName", "Chaiyawong"],
+    },
+    th: {
+      tagline: "ยินดีต้อนรับสู่ Portfolio ของฉัน",
+      description: "ฉันมีความสุขมากเมื่อฉันได้เรียนรู้กับการพัฒนาโปรในรูปแบบต่าง",
+      nameIntro: "สวัสดี, ฉันชื่อ..",
+     
+      names: ["นนทชัย", "นามสกุล", "ไชยวงศ์"],
+    },
+    jp: {
+      tagline: "私のポートフォリオへようこそ",
+      description: "さまざまな形でプログラムの開発を学ぶことができて、とても幸せです。",
+      nameIntro: "私の名前は..",
+     
+      names: ["ノンタチャイ", "ラストネーム", "チャイヤウォン"],
+    }
+  };
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  const toRotate = ["Nontachai", "LastName", "Chaiyawong"];
+  const currentText = textContent[language];
+  const toRotate = currentText.names; // เปลี่ยน toRotate ให้ใช้ชื่อจาก currentText
   const period = 1000;
 
   const tick = useCallback(() => {
@@ -44,20 +68,7 @@ export const Banner = ({ language }) => {
     return () => { clearInterval(ticker) };
   }, [delta, tick]);
 
-  const textContent = {
-    en: {
-      tagline: "Welcome to my Portfolio",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      buttonText: "Let’s Connect"
-    },
-    th: {
-      tagline: "ยินดีต้อนรับสู่ Portfolio ของฉัน",
-      description: "Lorem Ipsum เป็นเพียงข้อความจำลองของอุตสาหกรรมการพิมพ์และการเรียงพิมพ์ Lorem Ipsum เป็นข้อความจำลองมาตรฐานของอุตสาหกรรมนี้ตั้งแต่ช่วงปี 1500 เมื่อช่างพิมพ์ที่ไม่รู้จักได้รวบรวมแบบตัวพิมพ์และจัดเรียงเพื่อทำเป็นหนังสือตัวอย่างประเภท",
-      buttonText: "เชื่อมต่อกันเถอะ"
-    }
-  };
-
-  const currentText = textContent[language];
+  const nameString = JSON.stringify(toRotate);
 
   return (
     <section className="banner" id="home">
@@ -69,11 +80,19 @@ export const Banner = ({ language }) => {
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <span className="tagline">{currentText.tagline}</span>
                   <div className="background">
-                    <h1>{`My Name is..`} <br /><span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Nontachai", "LastName", "Chaiyawong" ]'><span className="wrap">{text}</span></span></h1>
+                    <h1>
+                      {currentText.nameIntro} <br />
+                      <span className="txt-rotate" dataPeriod="1000" data-rotate={nameString}>
+                        <span className="wrap">{text}</span>
+                      </span>
+                    </h1>
                     <p>{currentText.description}</p>
-                    <button onClick={() => console.log('connect')}>{currentText.buttonText} <ArrowRightCircle size={25} /></button>
+                    <button onClick={() => console.log('connect')}>
+                      {currentText.buttonText} <ArrowRightCircle size={25} />
+                    </button>
                   </div>
-                </div>}
+                </div>
+              }
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
@@ -81,11 +100,12 @@ export const Banner = ({ language }) => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
                   <img src={headerImg} alt="Header Img" />
-                </div>}
+                </div>
+              }
             </TrackVisibility>
           </Col>
         </Row>
       </Container>
     </section>
-  )
+  );
 }

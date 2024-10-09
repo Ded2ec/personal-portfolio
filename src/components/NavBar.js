@@ -1,16 +1,17 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
+
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import flagth from '../assets/img/thai.png';
 import flagen from '../assets/img/eng.png';
-import cvA from '../assets/doc/cv_th_download.pdf';
-import cvB from '../assets/doc/cv_en_download.pdf';
+import flagjp from '../assets/img/jp.svg';
+
 import reA from '../assets/doc/resume_th_download.pdf';
 import reB from '../assets/doc/resume_en_download.pdf';
 import '../App.css';
+import { AiOutlineContacts } from "react-icons/ai";
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -44,15 +45,23 @@ export const NavBar = ({ language, setLanguage }) => {
       home: "Home",
       skills: "Skills",
       projects: "Projects",
-      letsProfile: "Download CV. & Resume",
-      engi:"Computer engineering"
+      letsProfile: "Resume",
+      engi:"Welcome to my Portfolio"
     },
     th: {
       home: "หน้าแรก",
       skills: "ทักษะ",
       projects: "โครงการ",
-      letsProfile: "Download CV. & Resume",
-      engi:"วิศวกรรมคอมพิวเตอร์"
+      letsProfile: "เรซูเม่ ",
+      engi:"ยินดีต้อนรับสู่ พอร์ตโฟลิโอ"
+    }
+    ,
+    jp: {
+      home: "ホーム",
+      skills: "スキル ",
+      projects: "プロジェクト",
+      letsProfile: "ダウンロード履歴書",
+      engi:"ポートフォリオへようこそ"
     }
   };
 
@@ -74,7 +83,7 @@ export const NavBar = ({ language, setLanguage }) => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/" className="navbar-brand-custom"> 
-            <img src={logo} alt="Logo" className="logo-img" />
+          <AiOutlineContacts style={{ fontSize: '100px' }} />
             <span className="engi-class">{currentText.engi}</span>
            
           </Navbar.Brand>
@@ -96,10 +105,10 @@ export const NavBar = ({ language, setLanguage }) => {
                <div className="dropdown">
                 <button className="vvd"><span>{currentText.letsProfile}</span></button> 
                 <div className="dropdown-content">
-                  <button onClick={() => downloadFile(cvA, "cv_th_download.pdf")}>Cv. ภาษาไทย</button>
-                  <button onClick={() => downloadFile(cvB, "cv_en_download.pdf")}>Cv. English</button>
-                  <button onClick={() => downloadFile(reA, "resume_th_download.pdf")}>Resume ภาษาไทย</button>
+                  
+                  <button onClick={() => downloadFile(reA, "resume_th_download.pdf")}>Resume ไทย</button>
                   <button onClick={() => downloadFile(reB, "resume_en_download.pdf")}>Resume English</button>
+                  <button onClick={() => downloadFile(reB, "resume_jp_download.pdf")}>履歴書</button>
                 </div>
             
                 </div>
@@ -109,6 +118,7 @@ export const NavBar = ({ language, setLanguage }) => {
         <div className="section">
         <img className={`language-button ${isHovered ? 'zoom' : ''}`}onClick={() => setLanguage('en')}src={flagen}alt="English"onMouseEnter={() => setIsHovered(true)}onMouseLeave={() => setIsHovered(false)}/>
         <img className="language-button" onClick={() => setLanguage('th')} src={flagth} alt="" />
+        <img className="language-button" onClick={() => setLanguage('jp')} src={flagjp} alt="" />
         </div>
       </Navbar>
     </Router>

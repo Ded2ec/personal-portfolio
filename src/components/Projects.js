@@ -1,62 +1,56 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/project-img1.jpg";
+import projImg2 from "../assets/img/project-img2.jpg";
+import projImg3 from "../assets/img/project-img3.jpg";
+import projImg4 from "../assets/img/project-img4.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = ({ language }) => {
   const projects = [
+  
     {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
+      title: "authentication cloud computing",
       description: "Design & Development",
       imgUrl: projImg2,
     },
     {
-      title: "Business Startup",
+      title: "IPS Pay ERP",
       description: "Design & Development",
       imgUrl: projImg3,
     },
+    
     {
-      title: "Business Startup",
+      title: "IPS Cashbook",
       description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
-    },
+      imgUrl: projImg4,
+    }
+   
   ];
 
   const textContent = {
     en: {
       title: "Projects",
-      description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      description: "This is a sample of web application development work",
       tab1: "Tab 1",
       tab2: "Tab 2",
       tab3: "Tab 3",
-      tabContent: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque quam, quod neque provident velit, rem explicabo excepturi id illo molestiae blanditiis, eligendi dicta officiis asperiores delectus quasi inventore debitis quo."
     },
     th: {
       title: "โปรเจกต์",
-      description: "ตัวอย่างข้อความในอุตสาหกรรมการพิมพ์และการจัดเรียงพิมพ์ Lorem Ipsum เป็นข้อความตัวอย่างมาตรฐานของอุตสาหกรรมนี้ตั้งแต่ศตวรรษที่ 16 เมื่อนักพิมพ์ที่ไม่รู้จักนำตัวอย่างพิมพ์มาจัดเรียงเป็นหนังสือตัวอย่าง",
+      description: "เป็นตัวอย่างผลงานการพัฒนา web application",
       tab1: "แท็บ 1",
       tab2: "แท็บ 2",
       tab3: "แท็บ 3",
-      tabContent: "ตัวอย่างข้อความในอุตสาหกรรมการพิมพ์และการจัดเรียงพิมพ์ Lorem Ipsum เป็นข้อความตัวอย่างมาตรฐานของอุตสาหกรรมนี้ตั้งแต่ศตวรรษที่ 16 เมื่อนักพิมพ์ที่ไม่รู้จักนำตัวอย่างพิมพ์มาจัดเรียงเป็นหนังสือตัวอย่าง"
+    },
+    jp: {
+      title: "プロジェクト",
+      description: "これはWebアプリケーション開発の作業サンプルです。",
+      tab1: "タブ 1",
+      tab2: "タブ 2",
+      tab3: "タブ 3",
     }
   };
 

@@ -1,5 +1,7 @@
 import React from 'react';
 import { MDBCarousel, MDBCarouselItem, MDBCarouselCaption } from 'mdb-react-ui-kit';
+import pic6 from '../assets/img/p22.jpg';
+import pic5 from '../assets/img/p11.jpg';
 import pic1 from '../assets/img/p1.jpg';
 import pic2 from '../assets/img/p2.jpg';
 import pic3 from '../assets/img/p3.jpg';
@@ -50,46 +52,80 @@ export const Picture = ({ language }) => {
         description: "ข้อความตัวอย่างนี้ได้รับการใช้ในการพิมพ์",
       },
     ],
+    jp: [
+      {
+        pics: "ประสบการณ์",
+      },
+      {
+        label: "สไลด์แรก",
+        description: "ไม่ว่าจะอยู่ในที่ว่างหรือมีการฝึกฝนที่ดีขึ้น",
+      },
+      {
+        label: "สไลด์ที่สอง",
+        description: "ตัวอย่างข้อความที่ใช้ในการพิมพ์และการเรียงพิมพ์",
+      },
+      {
+        label: "สไลด์ที่สาม",
+        description: "ตัวอย่างข้อความในการจัดเรียงที่เป็นที่รู้จักกันดี",
+      },
+      {
+        label: "สไลด์ที่สี่",
+        description: "ข้อความตัวอย่างนี้ได้รับการใช้ในการพิมพ์",
+      },
+    ],
   };
 
   const currentText = textContent[language];
 
-
   return (
     <div className="skill-bx wow zoomIn" id="skills">
-         <h2>{currentText[0].pics}</h2> {/* Access the pics property */}
-    <div className='Pic'>
-      <MDBCarousel showControls showIndicators>
-        <MDBCarouselItem itemId={1}>
-          <img src={pic4} className='d-block w-100 carousel-image' alt='...' />
-          <MDBCarouselCaption>
-            <h5>{currentText[0].label}</h5>
-            <p>{currentText[0].description}</p>
-          </MDBCarouselCaption>
-        </MDBCarouselItem>
-        <MDBCarouselItem itemId={2}>
-          <img src={pic2} className='d-block w-100 carousel-image' alt='...' />
-          <MDBCarouselCaption>
-            <h5>{currentText[1].label}</h5>
-            <p>{currentText[1].description}</p>
-          </MDBCarouselCaption>
-        </MDBCarouselItem>
-        <MDBCarouselItem itemId={3}>
-          <img src={pic3} className='d-block w-100 carousel-image' alt='...' />
-          <MDBCarouselCaption>
-            <h5>{currentText[2].label}</h5>
-            <p>{currentText[2].description}</p>
-          </MDBCarouselCaption>
-        </MDBCarouselItem>
-        <MDBCarouselItem itemId={4}>
-          <img src={pic1} className='d-block w-100 carousel-image' alt='...' />
-          <MDBCarouselCaption>
-            <h5>{currentText[3].label}</h5>
-            <p>{currentText[3].description}</p>
-          </MDBCarouselCaption>
-        </MDBCarouselItem>
-      </MDBCarousel>
-    </div>
+      <h2>{currentText[0].pics}</h2>
+      <div className='Pic'>
+        <MDBCarousel showControls showIndicators>
+          <MDBCarouselItem itemId={1}>
+            <img src={pic4} className='d-block w-100 carousel-image' alt='...' />
+            <MDBCarouselCaption>
+              <h5>{currentText[1].label}</h5>
+              <p>{currentText[1].description}</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId={2}>
+            <img src={pic2} className='d-block w-100 carousel-image' alt='...' />
+            <MDBCarouselCaption>
+              <h5>{currentText[2].label}</h5>
+              <p>{currentText[2].description}</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId={3}>
+            <img src={pic3} className='d-block w-100 carousel-image' alt='...' />
+            <MDBCarouselCaption>
+              <h5>{currentText[3].label}</h5>
+              <p>{currentText[3].description}</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId={4}>
+            <img src={pic1} className='d-block w-100 carousel-image' alt='...' />
+            <MDBCarouselCaption>
+              <h5>{currentText[4].label}</h5>
+              <p>{currentText[4].description}</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId={5}>
+            <img src={pic5} className='d-block w-100 carousel-image' alt='...' />
+            <MDBCarouselCaption>
+              <h5>{currentText[1].label}</h5>
+              <p>{currentText[1].description}</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId={6}>
+            <img src={pic6} className='d-block w-100 carousel-image' alt='...' />
+            <MDBCarouselCaption>
+              <h5>{currentText[2].label}</h5>
+              <p>{currentText[2].description}</p>
+            </MDBCarouselCaption>
+          </MDBCarouselItem>
+        </MDBCarousel>
+      </div>
     </div>
   );
 }
