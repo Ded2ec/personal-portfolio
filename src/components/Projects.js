@@ -1,6 +1,6 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.jpg";
+
 import projImg2 from "../assets/img/project-img2.jpg";
 import projImg3 from "../assets/img/project-img3.jpg";
 import projImg4 from "../assets/img/project-img4.jpg";

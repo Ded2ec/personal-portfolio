@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import p4 from '../assets/img/p4.jpg'; // นำเข้าภาพที่ต้องการใช้
+
 import {
-  MDBBtn,
+
   MDBCol,
   MDBContainer,
   MDBRow,
@@ -116,13 +116,7 @@ export const Timeline = ({ language }) => {
 
   const currentText = textContent[language];
 
-  const handleReadMoreClick = (index) => {
-    if (selectedEventIndex === index) {
-      setSelectedEventIndex(null);
-    } else {
-      setSelectedEventIndex(index);
-    }
-  };
+ 
 
   return (
     <div className="skill_timeline">
