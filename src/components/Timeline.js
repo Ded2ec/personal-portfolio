@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import {
-
+  
   MDBCol,
   MDBContainer,
   MDBRow,
@@ -112,7 +112,7 @@ export const Timeline = ({ language }) => {
     }
   };
 
-  const [selectedEventIndex] = useState(0);
+  const [selectedEventIndex] = useState(null);
 
   const currentText = textContent[language];
 
@@ -139,7 +139,7 @@ export const Timeline = ({ language }) => {
                           <h5 className="pt-2">{event.title2}</h5>
                           <p className="text-muted">{event.description}</p>
                           <div>
-                           
+                         
                           </div>
                           {selectedEventIndex === index && (
 
@@ -153,11 +153,7 @@ export const Timeline = ({ language }) => {
                                 marginTop: '20px',
                               }}
                             >
-                              {/* <img 
-                                src={event.imgPath} 
-                                alt={event.title1} 
-                                style={{ width: "50%", borderRadius: "60px" }}  
-                              /> */}
+                          
                             </div>
                           )}
                         </div>
