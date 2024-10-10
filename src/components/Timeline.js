@@ -112,7 +112,7 @@ export const Timeline = ({ language }) => {
     }
   };
 
-  const [selectedEventIndex, setSelectedEventIndex] = useState(null);
+  const [selectedEventIndex] = useState(0);
 
   const currentText = textContent[language];
 
