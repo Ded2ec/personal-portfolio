@@ -4,6 +4,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import navIcon4 from '../assets/img/nav-icon4.svg';
 import flagth from '../assets/img/thai.png';
 import flagen from '../assets/img/eng.png';
 import flagjp from '../assets/img/jp.svg';
@@ -102,6 +103,7 @@ export const NavBar = ({ language, setLanguage }) => {
                 <a href="https://line.me/ti/p/fvUxhem5iE"><img src={navIcon1} alt="" /></a>
                 <a href="https://www.facebook.com/Goodnothing15229"><img src={navIcon2} alt="" /></a>
                 <a href="https://www.instagram.com/ded2ec15229?igsh=MWV0bmt4bzVyeGRpdA%3D%3D&utm_source=qr"><img src={navIcon3} alt="" /></a>
+                <a href="https://github.com/Ded2ec"><img src={navIcon4} alt="" /></a>
               </div>
                <div className="dropdown">
                 <button className="vvd"><span>{currentText.letsProfile}</span></button> 
