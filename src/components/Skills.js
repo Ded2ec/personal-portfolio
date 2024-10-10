@@ -98,7 +98,7 @@ export const Skills = ({ language }) => {
               </div>
             </Col>
             <Col xs={12} md={6} xl={5}>
-              
+              <div></div>
               <div className='bg-dark-blue dib br3 pa3 ma2 grow tc bw2 shadow-5'>
               <img className="pic" alt='robots' width='200' src={pc} />
                   </div>

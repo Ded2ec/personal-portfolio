@@ -956,5 +956,6 @@ h4 {
     }
 
     .pic {
+      margin-top: 30px; 
       border-radius: 15px; /* ปรับค่าตามที่ต้องการ */
   }
