@@ -6,7 +6,6 @@ import { Banner } from "./components/Banner";
 import { Skills } from "./components/Skills";
 import { Projects } from "./components/Projects";
 import { Timeline } from "./components/Timeline";
-
 import { useState } from "react";
 import Slider from "./components/slider";
 import { BrowserRouter } from "react-router-dom";
@@ -19,7 +18,9 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   const [language, setLanguage] = useState("en");
   return (
+    
     <div className="App">
+      <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
       <NavBar language={language} setLanguage={setLanguage} />
       <Banner language={language} />
       <Skills language={language} />
