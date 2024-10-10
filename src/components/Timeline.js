@@ -131,7 +131,14 @@ export const Timeline = ({ language }) => {
                   {currentText.events.map((event, index) => (
                     <li className="items-list" key={index}>
                       <div className="d-flex align-items-center justify-content-between px-4">
-                        <div className={`event-date badge bg-${["info", "success", "danger", "warning"][index % 4]}`} style={{ whiteSpace: 'nowrap' }}>
+                        <div className={`event-date badge bg-${["info", "success", "danger", "warning"][index % 4]}`} 
+                        style={{ whiteSpace: 'nowrap' ,
+                          padding: '10px 20px',
+                          minWidth: '120px'
+
+
+                        }}>
+                          
                           {event.date}
                         </div>
                         <div className="flex-grow-1 px-3">
