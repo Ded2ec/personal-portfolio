@@ -10,6 +10,7 @@ import flagjp from '../assets/img/jp.svg';
 
 import reA from '../assets/doc/resume_th_download.pdf';
 import reB from '../assets/doc/resume_en_download.pdf';
+import reC from '../assets/doc/resume_jp_download.pdf';
 import '../App.css';
 import { AiOutlineContacts } from "react-icons/ai";
 import {
@@ -108,7 +109,7 @@ export const NavBar = ({ language, setLanguage }) => {
                   
                   <button onClick={() => downloadFile(reA, "resume_th_download.pdf")}>Resume ไทย</button>
                   <button onClick={() => downloadFile(reB, "resume_en_download.pdf")}>Resume English</button>
-                  <button onClick={() => downloadFile(reB, "resume_jp_download.pdf")}>履歴書</button>
+                  <button onClick={() => downloadFile(reC, "resume_jp_download.pdf")}>履歴書</button>
                 </div>
             
                 </div>
