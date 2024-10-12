@@ -16,7 +16,7 @@ import { BrowserRouter } from "react-router-dom";
 <BrowserRouter basename={'/newty'}></BrowserRouter>
 
 function App() {
-  const [language, setLanguage] = useState("en");
+  const [language, setLanguage] = useState("jp");
   return (
     
     <div className="App">
