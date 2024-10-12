@@ -13,7 +13,10 @@ const Slider = ({ language }) => {
     },
     th: {
       sli: "ประสบการณ์",
-    }
+    },
+    jp: {
+      sli: "経験",
+    },
   };
 
   const currentText = textContent[language] || textContent.en;

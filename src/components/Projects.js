@@ -1,10 +1,19 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
 
+
+import projImg1 from "../assets/img/01.jpg";
+import projImg12 from "../assets/img/012.jpg";
 import projImg2 from "../assets/img/project-img2.jpg";
 import projImg3 from "../assets/img/project-img3.jpg";
 import projImg4 from "../assets/img/project-img4.jpg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+
+import projImg6 from "../assets/img/21.jpg";
+import projImg7 from "../assets/img/22.jpg";
+import projImg8 from "../assets/img/23.jpg";
+import projImg9 from "../assets/img/26.jpg";
+import projImg10 from "../assets/img/25.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -12,44 +21,88 @@ export const Projects = ({ language }) => {
   const projects = [
   
     {
-      title: "authentication cloud computing",
-      description: "Design & Development",
+      title: "Authentication cloud computing",
+      description: "Design webbase PHP html css bootstrap & Development Cloud Amazon ec2 ubuntu server web base and radius + mysql  ",
       imgUrl: projImg2,
     },
     {
       title: "IPS Pay ERP",
-      description: "Design & Development",
+      description: "Design PHP html css bootstrap pdff mysql  & Development  ",
       imgUrl: projImg3,
     },
     
     {
       title: "IPS Cashbook",
-      description: "Design & Development",
+      description: "Design PHP html css bootstrap pdff mysql  & Development",
       imgUrl: projImg4,
-    }
+    },
+    {
+      title: "flutter",
+      description: "Design & Development Application cross platform ",
+      imgUrl: projImg12,
+    },
+    {
+      title: " web responsive login user",
+      description: "Design html css bootstrap   ",
+      imgUrl: projImg1,
+    },
+    
+   
+  ]
+
+  const projects02 = [
+  
+    {
+      title: "Authentication Server",
+      description: " ubuntu server web base and radius + mysql in school ",
+      imgUrl: projImg6,
+    },
+    {
+      title: "Server NoHDD",
+      description: "Install Server NoHdd in school 30 cliend",
+      imgUrl: projImg7,
+    },
+    
+    {
+      title: "Windows Server",
+      description: "Using Hyper v -using ubuntu server web base & radius -pfsense",
+      imgUrl: projImg8,
+    },
+    {
+      title: "Pfsense Load Balancing",
+      description: " Balancing Dual Wan 2 internet service provider ",
+      imgUrl: projImg10,
+    },
+    {
+      title: "Installation&Configulation",
+      description: "Contracting for installation of Wi-Fi equipment at resorts",
+      imgUrl: projImg9,
+    },
+   
    
   ];
+  
 
   const textContent = {
     en: {
       title: "Projects",
       description: "This is a sample of web application development work",
-      tab1: "Tab 1",
-      tab2: "Tab 2",
+      tab1: "web application",
+      tab2: "Network",
       tab3: "Tab 3",
     },
     th: {
       title: "โปรเจกต์",
       description: "เป็นตัวอย่างผลงานการพัฒนา web application",
-      tab1: "แท็บ 1",
-      tab2: "แท็บ 2",
+      tab1: "เว็บแอปพลิเคชัน",
+      tab2: "เน็ตเวิร์ค",
       tab3: "แท็บ 3",
     },
     jp: {
       title: "プロジェクト",
       description: "これはWebアプリケーション開発の作業サンプルです。",
-      tab1: "タブ 1",
-      tab2: "タブ 2",
+      tab1: "ウェブアプリケーション",
+      tab2: "ネットワーク",
       tab3: "タブ 3",
     }
   };
@@ -95,10 +148,20 @@ export const Projects = ({ language }) => {
                       </Tab.Pane>
                       <Tab.Pane eventKey="second">
                         <p>{currentText.tabContent}</p>
+                        <Row>
+                        {
+                            projects02.map((projects02, index) => {
+                              return (
+                                <ProjectCard
+                                  key={index}
+                                  {...projects02}
+                                />
+                              )
+                            })
+                          }
+                          </Row>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="third">
-                        <p>{currentText.tabContent}</p>
-                      </Tab.Pane>
+                     
                     </Tab.Content>
                   </Tab.Container>
                 </div>}

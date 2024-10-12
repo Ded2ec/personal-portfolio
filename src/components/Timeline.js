@@ -84,7 +84,7 @@ export const Timeline = ({ language }) => {
           date: "2017 - 2018", 
           title1: "計画エンジニアリングと実施", 
           title2: "JASMINE INTERNATIONAL PUBLIC COMPANY LIMITED", 
-          description: "インターネットおよびVoIP電話の設置作業における、社内のインストールチームと県内の請負業者の責任を負い、顧客の問題を解決し、VDSLから光ファイバーへの移行作業を担当します。", 
+          description: "インターネットおよびVoIP電話の設置作業における、社内のインストールチームと県内の請負業者の責任を負い、顧客の問題を解決し、VDSLから光ファイバーへの移行作業を担当しますした。", 
         
         },
         { 
@@ -105,7 +105,7 @@ export const Timeline = ({ language }) => {
           date: "2023 - ปัจจุบัน", 
           title1: "電子基板を製造", 
           title2: "富士電機株式会社 (東京)", 
-          description: "	電子基板、電気回路、およびPLCの製造を担当する", 
+          description: "	電子基板、電気回路、およびの製造を担当する", 
         
         }
       ]

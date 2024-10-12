@@ -9,77 +9,39 @@ import pic4 from '../assets/img/p4.jpg';
 import '../App.css';
 
 export const Picture = ({ language }) => {
+  
   const textContent = {
     en: [
-      {
-        pics: "Experience",
-      },
-      {
-        label: "First slide label",
-        description: "Nulla vitae elit libero, a pharetra augue mollis interdum.",
-      },
-      {
-        label: "Second slide label",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      },
-      {
-        label: "Third slide label",
-        description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-      },
-      {
-        label: "Fourth slide label",
-        description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
-      },
-    ],
-    th: [
-      {
-        pics: "ประสบการณ์",
-      },
-      {
-        label: "สไลด์แรก",
-        description: "ไม่ว่าจะอยู่ในที่ว่างหรือมีการฝึกฝนที่ดีขึ้น",
-      },
-      {
-        label: "สไลด์ที่สอง",
-        description: "ตัวอย่างข้อความที่ใช้ในการพิมพ์และการเรียงพิมพ์",
-      },
-      {
-        label: "สไลด์ที่สาม",
-        description: "ตัวอย่างข้อความในการจัดเรียงที่เป็นที่รู้จักกันดี",
-      },
-      {
-        label: "สไลด์ที่สี่",
-        description: "ข้อความตัวอย่างนี้ได้รับการใช้ในการพิมพ์",
-      },
+      { picss: "Experience" },
+      { label: "First slide label", description: "Nulla vitae elit libero, a pharetra augue mollis interdum." },
+      { label: "Second slide label", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+      { label: "Third slide label", description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur." },
+      { label: "Fourth slide label", description: "Praesent commodo cursus magna, vel scelerisque nisl consectetur." },
     ],
     jp: [
-      {
-        pics: "ประสบการณ์",
-      },
-      {
-        label: "สไลด์แรก",
-        description: "ไม่ว่าจะอยู่ในที่ว่างหรือมีการฝึกฝนที่ดีขึ้น",
-      },
-      {
-        label: "สไลด์ที่สอง",
-        description: "ตัวอย่างข้อความที่ใช้ในการพิมพ์และการเรียงพิมพ์",
-      },
-      {
-        label: "สไลด์ที่สาม",
-        description: "ตัวอย่างข้อความในการจัดเรียงที่เป็นที่รู้จักกันดี",
-      },
-      {
-        label: "สไลด์ที่สี่",
-        description: "ข้อความตัวอย่างนี้ได้รับการใช้ในการพิมพ์",
-      },
+      { picss: "経験" },
+      { label: "最初のスライド", description: "これは最初のスライドの説明です。" },
+      { label: "2番目のスライド", description: "これは2番目のスライドの説明です。" },
+      { label: "3番目のスライド", description: "これは3番目のスライドの説明です。" },
+      { label: "4番目のスライド", description: "これは4番目のスライドの説明です。" },
     ],
+    th: [
+      { picss: "ประสบการณ์" },
+      { label: "สไลด์แรก", description: "ไม่ว่าจะอยู่ในที่ว่างหรือมีการฝึกฝนที่ดีขึ้น" },
+      { label: "สไลด์ที่สอง", description: "ตัวอย่างข้อความที่ใช้ในการพิมพ์และการเรียงพิมพ์" },
+      { label: "สไลด์ที่สาม", description: "ตัวอย่างข้อความในการจัดเรียงที่เป็นที่รู้จักกันดี" },
+      { label: "สไลด์ที่สี่", description: "ข้อความตัวอย่างนี้ได้รับการใช้ในการพิมพ์" },
+    ]
   };
-
+ 
   const currentText = textContent[language];
 
+
   return (
+
+  
     <div className="skill-bx wow zoomIn" id="skills">
-      <h2>{currentText[0].pics}</h2>
+      <h2>{currentText[0].picss}</h2>
       <div className='Pic'>
         <MDBCarousel showControls showIndicators>
           <MDBCarouselItem itemId={1}>
