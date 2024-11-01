@@ -1,12 +1,12 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
+import '../App.css';
 
-
-import projImg1 from "../assets/img/01.jpg";
-import projImg12 from "../assets/img/012.jpg";
-import projImg2 from "../assets/img/project-img2.jpg";
-import projImg3 from "../assets/img/project-img3.jpg";
-import projImg4 from "../assets/img/project-img4.jpg";
+import projImg1 from "../assets/img/01.svg";
+import projImg12 from "../assets/img/012.svg";
+import projImg2 from "../assets/img/project-img2.svg";
+import projImg3 from "../assets/img/project-img3.svg";
+import projImg4 from "../assets/img/project-img4.svg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 
 import projImg6 from "../assets/img/21.jpg";
@@ -14,7 +14,7 @@ import projImg7 from "../assets/img/22.jpg";
 import projImg8 from "../assets/img/23.jpg";
 import projImg9 from "../assets/img/26.jpg";
 import projImg10 from "../assets/img/25.jpg";
-import projImg11 from "../assets/img/s.jpg";
+import projImg11 from "../assets/img/ss.svg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -22,8 +22,8 @@ export const Projects = ({ language }) => {
   const projects = [
   
     {
-      title: "Spring Boot Store",
-      description: "Using frontend Nuxtjs Backend Springboot Database postgres Try Onclick user&pass 123456",
+      title: "web application Spring Boot Store ",
+      description: "Using frontend Nuxtjs vuetify  Backend Springboot Database postgres  Try Onclick user&pass 123456",
       imgUrl: projImg11,
       link: "https://springapp-render.onrender.com/",
       component: 'online'
@@ -34,13 +34,13 @@ export const Projects = ({ language }) => {
       imgUrl: projImg2,
     },
     {
-      title: "IPS Pay ERP",
+      title: "IPS Pay ERP  web application",
       description: "Design PHP html css bootstrap pdff mysql  & Development  ",
       imgUrl: projImg3,
     },
     
     {
-      title: "IPS Cashbook",
+      title: "IPS Cashbook  web application",
       description: "Design PHP html css bootstrap pdff mysql  & Development",
       imgUrl: projImg4,
     },
@@ -120,13 +120,15 @@ export const Projects = ({ language }) => {
   return (
     <section className="project" id="projects">
       <Container>
-        <Row>
+        <Row className="justify-content-center text-center">
           <Col size={12}>
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                  <h2>{currentText.title}</h2>
+                 <div className="text-center">
+             <h3>{currentText.title}</h3>
                   <p>{currentText.description}</p>
+                </div>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                       <Nav.Item>

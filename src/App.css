@@ -959,3 +959,12 @@ h4 {
       margin-top: 30px; 
       border-radius: 15px; /* ปรับค่าตามที่ต้องการ */
   }
+
+  .textCenter {
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .proj-txtx {
+    text-align: center;
+  }
