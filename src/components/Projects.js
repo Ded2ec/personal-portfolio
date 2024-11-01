@@ -14,12 +14,20 @@ import projImg7 from "../assets/img/22.jpg";
 import projImg8 from "../assets/img/23.jpg";
 import projImg9 from "../assets/img/26.jpg";
 import projImg10 from "../assets/img/25.jpg";
+import projImg11 from "../assets/img/s.jpg";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const Projects = ({ language }) => {
   const projects = [
   
+    {
+      title: "Spring Boot Store",
+      description: "Using frontend Nuxtjs Backend Springboot Database postgres Try Onclick user&pass 123456",
+      imgUrl: projImg11,
+      link: "https://springapp-render.onrender.com/",
+      component: 'online'
+    },
     {
       title: "Authentication cloud computing",
       description: "Design webbase PHP html css bootstrap & Development Cloud Amazon ec2 ubuntu server web base and radius + mysql  ",
